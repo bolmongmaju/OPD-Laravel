@@ -54,7 +54,7 @@ class DownloadController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required',
-            'file' => 'required|file|mimes:pdf,docx,xlsx,doc,zip|max:2048',
+            'file' => 'required|file|mimes:pdf,docx,xlsx,doc,zip|max:5048',
         ]);
 
         if ($request->file('file')) {
@@ -124,10 +124,10 @@ class DownloadController extends Controller
 
         if ($download) {
             //redirect dengan pesan sukses
-            return redirect()->route('admin.download.index')->with(['success' => 'Data Berhasil Diupdate!']);
+            return redirect()->route('admin.filedownload.index')->with(['success' => 'Data Berhasil Diupdate!']);
         } else {
             //redirect dengan pesan error
-            return redirect()->route('admin.download.index')->with(['error' => 'Data Gagal Diupdate!']);
+            return redirect()->route('admin.filedownload.index')->with(['error' => 'Data Gagal Diupdate!']);
         }
     }
 

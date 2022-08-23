@@ -102,7 +102,7 @@
                         @endcan
                         
                         @can('downloads.index')
-                            <li class="{{ setActive('admin/download') }}"><a class="nav-link" href="{{ route('admin.download.index') }}"><i class="fas fa-file-image"></i>
+                            <li class="{{ setActive('admin/download') }}"><a class="nav-link" href="{{ route('admin.filedownload.index') }}"><i class="fas fa-file-image"></i>
                         <span>Files</span></a></li>
                         @endcan
 
