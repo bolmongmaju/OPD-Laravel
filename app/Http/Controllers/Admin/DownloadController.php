@@ -94,7 +94,7 @@ class DownloadController extends Controller
      */
     public function edit(Download $download)
     {
-        return view('admin.download.edit', compact('download'));
+        return view('admin.download.edit',compact('download'));
     }
 
     /**
@@ -108,7 +108,7 @@ class DownloadController extends Controller
     {
         $request->validate([
             'nama' => 'required',
-            'file' => 'file|mimes:pdf,docx,xlsx,doc,zip|max:2048',
+            'file' => 'file|mimes:pdf,docx,xlsx,doc,zip|max:5048',
         ]);
 
 
@@ -124,10 +124,10 @@ class DownloadController extends Controller
 
         if ($download) {
             //redirect dengan pesan sukses
-            return redirect()->route('admin.filedownload.index')->with(['success' => 'Data Berhasil Diupdate!']);
+            return redirect()->route('admin.download.index')->with(['success' => 'Data Berhasil Diupdate!']);
         } else {
             //redirect dengan pesan error
-            return redirect()->route('admin.filedownload.index')->with(['error' => 'Data Gagal Diupdate!']);
+            return redirect()->route('admin.download.index')->with(['error' => 'Data Gagal Diupdate!']);
         }
     }
 
