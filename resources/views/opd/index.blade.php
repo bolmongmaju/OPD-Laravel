@@ -28,7 +28,7 @@
               <div class="dua-layanan">
                 {{-- <i class="bi bi-card-checklist"></i> --}}
                 <h4><a style="color: #f1f8ff" href="#">JDIH</a></h4>
-                <p class="satu-baris">Jaringan Dokumentasi dan Informasi Hukum</p>
+                <p class="satu-baris">Jaringan Dokumentasi dan Informasi hukum</p>
               </div>
           </div>
   
